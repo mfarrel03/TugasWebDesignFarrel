@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Gerai Batik Farrel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Form berhasil dikirim");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gerai Batik Farrel</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p>Untuk informasi lebih lanjut atau pertanyaan, silakan hubungi kami melalui form di bawah ini:</p>
+            <form action="#" method="post" onsubmit="submitForm(event)">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <!-- Dropdown Kategori Pesan -->
+                <label for="category">Kategori Pesan:</label>
+                <select id="category" name="category" required>
+                    <option value="pertanyaan">Pertanyaan</option>
+                    <option value="saran">Saran</option>
+                    <option value="masalah">Masalah</option>
+                </select>
+
+                <!-- Radio Button untuk Balasan -->
+                <p>Apakah Anda ingin menerima balasan?</p>
+                <input type="radio" id="yes" name="reply" value="yes" required>
+                <label for="yes">Ya</label>
+                <input type="radio" id="no" name="reply" value="no" required>
+                <label for="no">Tidak</label>
+
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gerai Batik Farrel. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="App.js"></script>
+</body>
+</html>
